@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+        <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Carrito(<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Borrar carrito</button></div>
+        </div>
+    </nav>
+  <main>
+    <form class="form-container">
+      <div class="container">
+        <h1>Login</h1>
+        <div class="user-container">
+          <input
+            type="email"
+            required
+            placeholder="Email"
+            class="user-input"
+          />
+          <span class="user-msg"></span>
+        </div>
+        <div class="pass-container">
+          <input
+            type="password"
+            required
+            placeholder="contraseña"
+            class="pass-input"
+          />
+          <span class="pass-msg"></span>
+        </div>
+        <div class="login-container">
+          <button class="login-btn">Ingresar</button>
+          <span class="login-msg"></span>
+        </div>
+      </div>
+    </form>
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="./images/foto2.jpeg">
+      <div class="card-block">
+        <h4 class="card-title"></h4>
+        <p class="card-text">Precio: $1500</p>
+        <a href="#" data-name="Conjunto blanco algodon" data-price="1500" class="add-to-cart btn btn-primary">Añadir al carrito</a>
+      </div>
+    </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="./images/foto1.jpeg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"></h4>
+        <p class="card-text">Precio: $1000</p>
+        <a href="#" data-name="conjunto rojo algodon" data-price="1000" class="add-to-cart btn btn-primary">Añadir al carrito</a>
+      </div>
+    </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="./images/foto3.jpeg">
+      <div class="card-block">
+        <h4 class="card-title"></h4>
+        <p class="card-text">Precio: $1500</p>
+        <a href="#" data-name="conjunto negro encaje" data-price="1500" class="add-to-cart btn btn-primary">Añadir al carrito</a>
+      </div>
+    </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="./images/foto4.jpeg">
+      <div class="card-block">
+        <h4 class="card-title"></h4>
+        <p class="card-text">Precio: $2000</p>
+        <a href="#" data-name="Conjunto de encaje" data-price="2000" class="add-to-cart btn btn-primary">Añadir al carrito</a>
+      </div>
+    </div>
+    
+    
+        </div>
+    </div>
+    
+      
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table">
+              
+            </table>
+            <div>Precio total: $<span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" id="click" class="btn btn-primary">Ordenar ahora</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="loops.js"></script>
+    
+</body>
+</html>
